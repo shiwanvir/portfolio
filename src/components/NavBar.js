@@ -30,13 +30,18 @@ const onUpdateActivelink = (value) =>{
 
 
 }
+
+const handleClick = () => {
+    var yourEmail = "shiwanvir@gmail.com"
+    window.location.href = `mailto:${yourEmail}`;
+  };
     return (
 
         <Navbar expand="lg" className={scrolled ? "scrolled" : "" }>
             <Container>
-                <Navbar.Brand href="#home">
+                {/* <Navbar.Brand href="#home">
                     <img src={logo} alt='Logo'/> 
-                </Navbar.Brand>
+                </Navbar.Brand> */}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" >
                     <span className='navbar-toggler-icon'></span>
                 </Navbar.Toggle>
@@ -54,7 +59,7 @@ const onUpdateActivelink = (value) =>{
 
 
                         </div>
-                <button className='vv' onClick={()=>{console.log("clicked")}}><span>Let's connect</span></button>
+                <button className='vv' onClick={handleClick}><span>Let's connect</span></button>
                     </span>
                 </Navbar.Collapse>
             </Container>

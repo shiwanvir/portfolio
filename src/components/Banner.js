@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react";
 import { Row,Col, Container } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import HeaderImage from "../assets/img/header-img.svg";
+import HeaderImage from "../assets/img/main-background.png";
 
 
 
@@ -21,7 +21,10 @@ tick()
 return ()=>{clearInterval(ticker)}
 },[text])
 
-
+const handleClick = () => {
+    var yourEmail = "shiwanvir@gmail.com"
+    window.location.href = `mailto:${yourEmail}`;
+  };
 const tick = () =>{
 
     let i = loopNum % toRoute.length;
@@ -52,7 +55,7 @@ const tick = () =>{
                     <span className="tagline">welcome to my portfolio</span>
                     <h1>{`Hi I'm Shiwantha`}<span className="wrap"> {text}</span> </h1>
                     <p>I'm a detail oriented, responsible committed Software Engineer who have a high quality product development experience. Moreover I have hands on experience in ERP development, SAP integration and mobile app development</p>
-                    <button onClick={()=>{console.log("let's connect")}}>Let's connect<ArrowRightCircle size={25}/></button>
+                    <button onClick={handleClick}>Let's connect<ArrowRightCircle size={25}/></button>
                     </Col>
                     <Col xs={12}  md={6} xl={7}>
                        <img src={HeaderImage} alt="Header Image"></img> 
